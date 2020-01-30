@@ -1,5 +1,16 @@
 $(document).ready(function () {
 
+
+  // generazione div in js
+  for (var i = 0; i < 6; i++) {
+    $('body').append('<div class="row"></div>');
+
+    for (var j = 0; j < 6; j++) {
+      $('.row').eq(i).append('<div class="quadrato"></div>');
+    }
+  }
+
+
   $(document).on('click', '.quadrato', function() {
     var quadrato = $(this);
 

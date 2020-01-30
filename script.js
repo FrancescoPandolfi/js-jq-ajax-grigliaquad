@@ -3,7 +3,7 @@ $(document).ready(function () {
 
   $(document).on('click', '.quadrato', function() {
 
-    var quadrato = this;
+    var quadrato = $(this);
 
     $.ajax({
         'url' : "https://flynn.boolean.careers/exercises/api/random/int",
@@ -20,11 +20,11 @@ $(document).ready(function () {
     });
 
     function checkNum(num) {
-      $(quadrato).text(num);
+      quadrato.text(num);
       if (num <= 5) {
-        $(quadrato).addClass('giallo');
+        quadrato.addClass('giallo');
       } else {
-        $(quadrato).addClass('verde');
+        quadrato.addClass('verde');
       }
     }
 
